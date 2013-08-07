@@ -1,0 +1,12 @@
+body {
+	font-family: Helvetica Neue;
+}
+
+#header {
+	padding-top: 50px;
+	text-align: center;
+
+	color: #555;
+	font-size: 30px;
+	font-weight: 100;
+}
