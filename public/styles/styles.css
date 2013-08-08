@@ -2,11 +2,18 @@ body {
 	font-family: Helvetica Neue;
 }
 
-#header {
-	padding-top: 50px;
+h1 {
+	padding-top: 200px;
 	text-align: center;
 
 	color: #555;
 	font-size: 30px;
+	font-weight: 100;
+}
+
+p {
+	text-align: center;
+	color: #555;
+	font-size: 20px;
 	font-weight: 100;
 }
