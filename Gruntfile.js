@@ -2,18 +2,43 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    // Directories
+    dirs: {
+      public: 'public/',
+      scripts: '<%= dirs.public %>/scripts/',
+      styles: '<%= dirs.public %>/sass',
+    },
+
     // JSHint options
     jshint: {
       options: {
         jshintrc: 'public/scripts/.jshintrc'
       },
-      scripts: 'public/scripts/**/*.js',
+      scripts: '<%= dirs.public %>/scripts/**/*.js',
+    },
+
+    // Compass options
+    compass: {
+      dist: {
+        options: {
+          basePath: '<%= dirs.public %>'
+        }
+      }
     },
 
     // Watch task options
     watch: {
-      files: ['<%= jshint.scripts %>'],
-      tasks: ['jshint']
+      scripts: {
+        files: ['<%= dirs.public %>/scripts/**/*.js'],
+        tasks: ['jshint']
+      },
+      styles: {
+        files: ['<%= dirs.styles %>' + '/**/*.scss'],
+        tasks: ['compass'],
+        options: {
+          livereload: true
+        }
+      }
     }
   });
 
@@ -28,8 +53,9 @@ module.exports = function(grunt) {
   // Load NPM plugins
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-compass');
 
   // Register default task
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['jshint', 'compass']);
 
 };

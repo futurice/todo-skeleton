@@ -1,223 +1,222 @@
 /* ==========================================================================
    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
    ========================================================================== */
-
+/* line 9, ../sass/boilerplate.scss */
 html,
 button,
 input,
 select,
 textarea {
-    color: #222;
+  color: #222;
 }
 
+/* line 13, ../sass/boilerplate.scss */
 body {
-    font-size: 1em;
-    line-height: 1.4;
+  font-size: 1em;
+  line-height: 1.4;
 }
 
+/* line 18, ../sass/boilerplate.scss */
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
+/* line 23, ../sass/boilerplate.scss */
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
+/* line 28, ../sass/boilerplate.scss */
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
+/* line 37, ../sass/boilerplate.scss */
 img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
+/* line 41, ../sass/boilerplate.scss */
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
+/* line 47, ../sass/boilerplate.scss */
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
+/* line 51, ../sass/boilerplate.scss */
 .chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
-
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-
-}
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
+/* line 96, ../sass/boilerplate.scss */
 .ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
 }
 
+/* line 103, ../sass/boilerplate.scss */
 .ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
 }
 
+/* line 110, ../sass/boilerplate.scss */
 .hidden {
-    display: none !important;
-    visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 
+/* line 115, ../sass/boilerplate.scss */
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
+/* line 127, ../sass/boilerplate.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
 
+/* line 136, ../sass/boilerplate.scss */
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
+/* line 141, ../sass/boilerplate.scss */
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
+/* line 146, ../sass/boilerplate.scss */
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
+/* line 150, ../sass/boilerplate.scss */
 .clearfix {
-    *zoom: 1;
+  *zoom: 1;
 }
 
 /* ==========================================================================
    Print styles
    ========================================================================== */
-
 @media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+  /* line 159, ../sass/boilerplate.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  /* line 167, ../sass/boilerplate.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+  /* line 171, ../sass/boilerplate.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+  /* line 175, ../sass/boilerplate.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
 
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 185, ../sass/boilerplate.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
+  /* line 190, ../sass/boilerplate.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+  /* line 195, ../sass/boilerplate.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
 
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
+  /* line 200, ../sass/boilerplate.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+  /* line 204, ../sass/boilerplate.scss */
+  img {
+    max-width: 100% !important;
+  }
 
-    img {
-        max-width: 100% !important;
-    }
+  @page {
+    margin: 0.5cm;
+}
 
-    @page {
-        margin: 0.5cm;
-    }
+  /* line 214, ../sass/boilerplate.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  /* line 220, ../sass/boilerplate.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
