@@ -4,6 +4,7 @@ var _ = require('underscore');
 var app = express();
 
 app.use(express.bodyParser());
+app.use(express.static('public'));
 
 var FILENAME = "./db_data.json";
 
@@ -43,7 +44,8 @@ function save(success) {
 }
 
 // Create
-app.post('/todos', function(req, res) {
+app.post('/api/todos', function(req, res) {
+  console.log("POST /api/todos");
   var contentType = req.headers['content-type'];
   if(req.headers['content-type'] !== "application/json") {
     return res.send(400, "request content type was " + contentType + ", should be application/json");
@@ -65,13 +67,15 @@ app.post('/todos', function(req, res) {
 });
 
 // Read
-app.get('/todos', function(req, res){
+app.get('/api/todos', function(req, res){
+  console.log("GET /api/todos");
   console.log("Returning all items");
   return res.send(todos);
 });
 
 // Update
-app.put('/todos/:id', function(req, res){
+app.put('/api/todos/:id', function(req, res){
+  console.log("PUT /api/todos/:id");
   var contentType = req.headers['content-type'];
   if(req.headers['content-type'] !== "application/json") {
     return res.send(400, "request content type was " + contentType + ", should be application/json");
@@ -96,7 +100,8 @@ app.put('/todos/:id', function(req, res){
 });
 
 // Delete
-app.del('/todos/:id', function(req, res){
+app.del('/api/todos/:id', function(req, res){
+  console.log("DELETE /api/todos/:id");
   var itemToDelete = _.find(todos, function(item) {
     return item.id === Number(req.params.id);
   });
@@ -113,5 +118,7 @@ load(function() {
   console.log("Loaded", todos.length, "items from file");
   console.log(todos);
   app.listen(3000);
-  console.log('Listening on port 3000');
+  console.log('\nListening on port 3000\n');
+  console.log('http://localhost:3000 to access the public HTML files');
+  console.log('http://localhost:3000/api/todos to access Rest API\n');
 });
