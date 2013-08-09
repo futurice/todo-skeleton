@@ -12,7 +12,7 @@ var todos = [];
 
 function load(success) {
   fs.exists(FILENAME, function (exists) {
-    if(!exists) { return; }
+    if(!exists) { return success(); }
 
     fs.readFile(FILENAME, function (err, data) {
       if (err) throw err;
