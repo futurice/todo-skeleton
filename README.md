@@ -5,6 +5,12 @@ Todo application skeleton
 
 ## Getting started
 
+Fork the repository, here are very good instructions how:
+
+[https://help.github.com/articles/fork-a-repo](https://help.github.com/articles/fork-a-repo)
+
+Clone the repository
+
 ```bash
 npm install -g grunt-cli
 npm install
