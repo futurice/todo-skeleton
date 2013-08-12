@@ -12,7 +12,7 @@ Fork the repository, here are very good instructions how:
 Clone the repository
 
 ```bash
-npm install -g grunt-cli
+(sudo) npm install -g grunt-cli
 npm install
 
 # Open a new tab and type
