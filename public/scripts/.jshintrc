@@ -66,6 +66,8 @@
     "white"         : false,
 
     "globals"       : {
-      "_": true
+      "_": true,
+      "require": true,
+      "define": true
     }
 }
