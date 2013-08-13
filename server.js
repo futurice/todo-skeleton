@@ -43,11 +43,15 @@ function save(success) {
   }); 
 }
 
+function isJSONContentType(req) {
+  return req.headers['content-type'].indexOf("application/json") !== -1;
+}
+
 // Create
 app.post('/api/todos', function(req, res) {
   console.log("POST /api/todos");
-  var contentType = req.headers['content-type'];
-  if(req.headers['content-type'] !== "application/json") {
+  
+  if(!isJSONContentType(req)) {
     return res.send(400, "request content type was " + contentType + ", should be application/json");
   }
 
@@ -76,8 +80,8 @@ app.get('/api/todos', function(req, res){
 // Update
 app.put('/api/todos/:id', function(req, res){
   console.log("PUT /api/todos/:id");
-  var contentType = req.headers['content-type'];
-  if(req.headers['content-type'] !== "application/json") {
+
+  if(!isJSONContentType(req)) {
     return res.send(400, "request content type was " + contentType + ", should be application/json");
   }
 
