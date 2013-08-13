@@ -94,8 +94,8 @@ app.put('/api/todos/:id', function(req, res){
     return res.send(404);
   }
 
-  itemToUpdate.title = req.body.title || itemToUpdate.title;
-  itemToUpdate.done = req.body.done || itemToUpdate.done;
+  itemToUpdate.title = _.isString(req.body.title) ? req.body.title : itemToUpdate.title;
+  itemToUpdate.done = _.isBoolean(req.body.done) ? req.body.done : itemToUpdate.done;
 
   save(function() {
     console.log("Updated item", itemToUpdate);
