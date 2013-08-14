@@ -1,5 +1,6 @@
 define(['jquery', 'backbone'], function($, Backbone) {
-	
+	"use strict";
+
 	// Define Todo model
 	var Item = Backbone.Model.extend({
 		urlRoot: "/api/todos"
@@ -16,14 +17,12 @@ define(['jquery', 'backbone'], function($, Backbone) {
 	var list = new List();
 	list.fetch();
 
-	// Example of events
 	list.on("sync", function(collection) {
-		debugger;
-		console.log("Collection successfully synced.")
+		console.log("Collection successfully synced.");
 		console.log(collection.models.length, "items loaded from server");
 		collection.forEach(function(model) {
 			console.log(model);
-		})
+		});
 	});
 
 	// Create new item and save it
@@ -36,9 +35,7 @@ define(['jquery', 'backbone'], function($, Backbone) {
 	list.add(item);
 	item.save();
 
-	debugger;
 	item.on("sync", function(model) {
-		debugger;
 		console.log("Item successfully saved to server");
 		console.log(model);
 
@@ -61,19 +58,17 @@ define(['jquery', 'backbone'], function($, Backbone) {
 		},
 
 		"delete": function() {
-			debugger;
 			console.log("Now, delete me");
 		},
 
 		render: function() {
-			debugger;
 			// Instantiate SubView
 			// Add subview to ListView
 			// Render SubView
 		}
 	});
 
-	var listView = new ListView({
+	new ListView({
 		collection: list
 	});
 
