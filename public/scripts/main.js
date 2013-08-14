@@ -16,10 +16,10 @@
 requirejs.config({
     paths: {
         jquery: [
-            '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min',
-            '../lib/jquery' // your fallback
+            '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
+            '../bower_components/jquery/jquery' // your fallback
         ],
-        underscore: '../lib/underscore',
+        underscore: '../bower_components/underscore/underscore',
         text: '../lib/text',
         partials: '../partials'
     },

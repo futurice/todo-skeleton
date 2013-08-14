@@ -2,3 +2,4 @@
 node_modules
 db_data.json
 .sass-cache
+bower_components
