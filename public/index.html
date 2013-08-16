@@ -15,9 +15,27 @@
 
     <body>
 
-        <h1>Hello World!</h1>
+        <header>
+            <h1>Todo</h1>
+        </header>
 
-        <p>This is a skeleton for your Todo application</p>
+        <section id="todo-container">
+            <header id="new-item-header">
+                <input id="new-item" type="text" placeholder="What needs to be done?" />
+            </header>
+            <section>
+                <ul id="todo-list">
+
+                </ul>
+            </section>
+            <footer id="todo-footer">
+                <div class="fl">Items left <strong id="items-left"></strong></div>
+                <div class="fr">
+                    <span class="filter" id="filter-all">All</span>
+                    <span class="filter" id="filter-active">Active</span>
+                    <span class="filter" id="filter-completed">Completed</span></div>
+            </footer>
+        </section>
 
         <script data-main="scripts/main" src="lib/require.js"></script>
     </body>

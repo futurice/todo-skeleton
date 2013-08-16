@@ -21,24 +21,44 @@ requirejs.config({
         ],
         underscore: '../bower_components/underscore/underscore',
         text: '../lib/text',
-        partials: '../partials'
+        partials: '../partials',
+        backbone: '../bower_components/backbone/backbone'
     },
     shim: {
         'underscore': {
             exports: '_'
+        },
+        'backbone': {
+            deps: ['underscore', 'jquery'],
+            exports: 'Backbone'
         }
     }
 });
 
-define(['jquery', 'underscore'], function($, _) {
+define([
+    'jquery', 
+    'underscore', 
+    'collections/list', 
+    'views/list', 
+    'views/new-item',
+    'views/footer',
+    'models/list-filter'], 
+        function($, _, List, ListView, NewItemView, Footer, ListFilter) {
+    
     "use strict";
-    console.log("This is required file");
-
-    if($) {
-        console.log("jQuery is loaded!");
-    }
-
-    if(_) {
-        console.log("Underscore is defined");
-    }
+    
+    var listFilter = new ListFilter();
+    var list = new List();
+    new ListView({
+        collection: list,
+        listFilter: listFilter
+    });
+    new NewItemView({
+        collection: list
+    });
+    new Footer({
+        collection: list,
+        listFilter: listFilter
+    });
+    list.fetch();
 });
